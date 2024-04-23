@@ -65,3 +65,52 @@ long number=100L;
     it give error: integer too large
 
 so a numeric literal that exceed Integer.MAX_VALUE must use the 'L' suffix.
+
+36.casting: which is a way to get java to treat a variable of one type like a different data type.
+casting means to treat or convert number from one type to another. We put the type we want the number to be in parentheses like this:
+(byte)(myMinByteValue/2)
+
+37.What does it mean when java defaults the data type to an int?
+int myTotal =(myMinIntValue/2);
+this statement works because the result is an int and assiging to an int varible is fine.
+
+short myNewShortValue =(myMinShortValue)/2;
+this statemnt doesn't work,because the expression (myMinShortValue/2) is an int ,and an int can't be assigned to a short,becuase the compiler won't guess the result.
+
+short myNewShortValue =(-128/2);
+this statement works,because the result of (-128/2) is an int, but when calculations use only literal values,the compiler can determine the result immediately, and knows the value fits into a short.
+
+38. there are two primitive type in java for expressing floating point numbers float and double.
+    the double is java default type of any decimal or real number.
+    data type width(in bits)
+    float 32
+    double 64
+39. as a default the double is used for float data type can be sepcified as anumeric literal with a suffix of lowercase 'f' or uppercase 'F'.
+    for double suffix d or D.
+40. float myOtherFloatValue =5.25;
+    the number 5.25 is a double so assigning it to a float will raise an error.
+41. float and double are great for general floating point operationns. but neither should be used when precise calculations are required-this is due to a limitation with how floating points numbered are stored.
+    Java has a class called BigDecimal that overcomes this.
+42. A char occupies two bytes of memory ,or 16 bits and thus has a width of 16.
+    43.Unicode is an encoding stardard for use with different language and script by which each letter ,digit or symbol is assigned a unique numeric value.
+43. for unicode character we need to put a \u and those four digits.
+    ex: char myUnicode='\u0044';
+    so there are three way to assign a value to a char:
+    a literal character : char myChar ='D';
+    a Unicode value : char myChar ='\u004'
+    an integer value : char myChar =68;
+    44.Why you start your boolean variale name with the prefix 'is'?
+    this creates a name that seems to ask a question.
+44. way to create your own data type ,which in Java are called classes. java's built-in classes like
+    Wrappers(Boolean,Byte,Character,etc)
+    BigDecimal
+    String
+
+45. intersting about classes is that we can combine data types like, one or more ints,doubles,booleans,etc and create a sort of super data type. which are called classes in Java.
+
+46. string is not a primitive type , it actually a class bit of favoritism in Java to make it easier to use than a regular class(basically it is a class that contains a sequence of characters)
+47. Strings are immutable means that we can't change a String after it's created.
+    Java provides a class in its library to address the inefficieny of the immutable String when we are creating a large amount of text from many smaller parts.
+    48.THe StringBuilder class is mutable ,but does not share the String's special features such as being able to assign it a String literal or use the + operator on it.
+
+48.comment: //
